@@ -31,7 +31,7 @@ require("./passportConfig")(passport);
 //-----------------------------------------End Of MiddleWares------------------------------------//
 //Database connect
 mongoose.connect(
-  "mongodb://localhost:27017/passportPractice",
+  "mongodb+srv://ayush:1234@cluster0.4cupz.mongodb.net/hackbyte?retryWrites=true&w=majority",
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => {
     if (err) {
@@ -95,6 +95,6 @@ app.get("/logout", (req, res) => {
   }
 });
 //-----------------------------------------End Of Routes------------------------------------//
-app.listen("5000", () => {
-  console.log("server is running on port 5000.....");
+app.listen("8000", () => {
+  console.log("server is running on port 8000.....");
 });
